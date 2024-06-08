@@ -20,10 +20,18 @@ go get -u github.com/asif-mahmud/go-postgis
 ### Documentation
 
 godoc: [https://pkg.go.dev/github.com/asif-mahmud/go-postgis](https://pkg.go.dev/github.com/asif-mahmud/go-postgis)
+well known binary format - [https://github.com/postgis/postgis/blob/master/doc/bnf-wkb.txt](https://github.com/postgis/postgis/blob/master/doc/bnf-wkb.txt) 
+well known text format - [https://github.com/postgis/postgis/blob/master/doc/bnf-wkt.txt](https://github.com/postgis/postgis/blob/master/doc/bnf-wkt.txt)
 
 ### Supported datatypes
 1. Point (X, Y) - added in v0.1.1
 2. PointS (SRID X, Y) - added in v0.1.1
+3. PointZ (X, Y, Z) - added in v0.1.2
+4. PointZS (SRID X, Y, Z) - added in v0.1.2
+5. PointM (X, Y, M) - added in v0.1.2
+6. PointMS (SRID X, Y, M) - added in v0.1.2
+7. PointZM (X, Y, Z, M) - added in v0.1.2
+8. PointZMS (SRID X, Y, Z, M) - added in v0.1.2
 
 ### Example usage
 
@@ -52,6 +60,11 @@ if e := row.Scan(&point); e != nil {
 ```
 
 ## Version history
+
+### Version 0.1.2
+
+- Added `PointZ`, `PointZS`, `PointM`, `PointMS`, `PointZM` and `PointZMS` types
+- Updated readme
 
 ### Version 0.1.1
 
